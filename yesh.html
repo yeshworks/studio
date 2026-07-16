@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yesh's Interactive Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="icon.png">
+
+</head>
+<body>
+
+  <!-- MAIN CARD CONTAINER -->
+  <div class="card-container">
+    <div class="card" id="myCard">
+      
+      <!-- ========================================== -->
+      <!-- 1. FRONT OF THE CARD (Harap) -->
+      <!-- ========================================== -->
+      <div class="card-face card-front">
+        <!-- TOP LAYER DECORATION (FRONT) -->
+        <img src="card-deco.png" alt="Card Decoration" class="card-deco-layer">
+        
+        <!-- Top Row: Avatar at Text Info (40/60 Split) -->
+        <div class="profile-section">
+          <div class="avatar-box">
+            <img src="profile.png" alt="Yesh Avatar" class="avatar-img">
+          </div>
+          
+          <div class="info-text">
+            <h2 class="username">Yesh Wyvernglenn</h2>
+            <p class="bio-line"><b>✦ chibi • tweening • illustration  ✦</b><br>୨୧ he / him<br>
+            dreaming of becoming a VTuber <br>while surviving college<br>
+<br>
+            <b>!!please don't feed my artwork into AI!!</b><br><br>
+            if you like my art, consider commissioning me<br>instead on <b>vgen</b> ♡
+            ૮₍ ˃ ⤙ ˂ ₎ა ⟡</p>
+          </div>
+        </div>
+
+        <!-- Middle Row: Hand-drawn Divider Line -->
+        <div class="divider-container">
+          <img src="devider.png" alt="Card Divider" class="divider-img">
+        </div>
+
+        <!-- Bottom Row: Social Media section -->
+        <div class="socials-container">
+          <span class="find-on-text">find on</span>
+          
+          <div class="social-icons">
+            <a href="https://instagram.com/yeshworks" target="_blank" class="icon-btn">
+              <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/yeshworks" target="_blank" class="icon-btn">
+              <img src="x.png" alt="Twitter/X">
+            </a>
+            <a href="javascript:void(0)" class="icon-btn" onclick="openDiscordModal(event)">
+              <img src="discord.png" alt="Discord">
+            </a>
+            <a href="https://vgen.co/yeshworks" class="icon-btn">
+              <img src="vgen.png" alt="VGen">
+            </a>
+          </div>
+        </div>
+
+      </div> <!-- End of Front Card -->
+
+
+      <!-- ========================================== -->
+      <!-- 2. BACK OF THE CARD (Likod) -->
+      <!-- ========================================== -->
+      <div class="card-face card-back">
+        <!-- TOP LAYER DECORATION (BACK) -->
+        <img src="card-deco.png" alt="Card Decoration" class="card-deco-layer">
+
+        <div class="back-content-layout">
+          
+          <!-- Left Side: Cute Bottle and Bird -->
+          <div class="illustration-box">
+            <img src="tip-jar.png" 
+                 alt="Cute Bottle and Bird" 
+                 class="back-illustration" 
+                 tabindex="0"
+                 href="https://ko-fi.com/yeshworks"
+                 onclick="shakeJar(event, this)" 
+                 ontouchstart="shakeJar(event, this)"
+                 style="cursor: pointer; -webkit-tap-highlight-color: transparent;">
+          </div>
+
+          <!-- Right Side: Discord Ticket at Username -->
+          <div class="discord-section">
+            <div class="discord-ticket-wrapper" onclick="openDiscordModal(event)" style="cursor: pointer;">
+              <!--img src="assets/discord-ticket.png" alt="Discord Banner" class="ticket-bg"-->
+              
+              <div class="discord-text-overlay">
+                <span class="discord-tag"><h3>Tap the jar to support me! ✦</h3><h3><b>about me</b></h3>
+                Hi! I'm <b>Yesh <i>(Yesh Wyvernglenn)</i></b>, a 20-year-old student and digital artist from the Philippines. I've been drawing for 6 years, creating cute art with ibisPaint X and Alight Motion. I started taking commissions in 2026 and aspire to become a VTuber. Commissions are available on <b><i>Vgen</i></b>, and you can reach me via <b><i>Discord</i></b> or <b><i>Twitter/X</i></b>. Please don't use my artwork for AI. (ᵔ⩊ᵔ)<br><br><br><b>thanks for stopping byଘ( ᴗ͈   ᴗ͈)ഒ </b></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- End of Back Card -->
+
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- 3. INTERACTIVE FLIP BUTTON -->
+  <!-- ========================================== -->
+  <button class="flip-btn" onclick="flipCard()">
+    <img src="flip-me.png" alt="Flip Me Button" class="flip-button-img">
+  </button>
+
+
+  <!-- ========================================== -->
+  <!-- 4. DISCORD POP-UP MODAL -->
+  <!-- ========================================== -->
+  <div class="modal-overlay" id="discordModal" onclick="closeDiscordModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3>Discord Contact</h3>
+      </div>
+      
+      <p class="modal-instruction">Click the username below to copy!</p>
+      
+      <div class="copy-box" onclick="copyDiscordTag(this)">
+        <span class="discord-copy-tag">@yesh.wrks</span>
+        <div class="tooltip" id="copyTooltip">Copy to clipboard</div>
+      </div>
+    </div>
+  </div>
+  <!-- Invisible Audio Elements for Sound Effects -->
+  <audio id="coinSound" src="coin.mp3" preload="auto"></audio>
+  <audio id="flipSound" src="flip.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

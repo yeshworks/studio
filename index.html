@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yesh Works | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    
+    <div id="loader">
+        <div class="loader-content">
+            <img src="pfp.gif" alt="Loading..." class="loader-img">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <p>loading assets...</p>
+        </div>
+    </div>
+
+    <div id="home-container">
+        <div id="textnimage">
+            <h1 class="txt">--Yesh Works--</h1>
+            <img id="pfp" src="pfp.gif" alt="Profile Picture">
+            <h5 class="txt">illustrator, rigger, & aspiring developer</h5>
+        </div>
+        
+        <hr>
+        
+        <div id="navigation">
+            <h4 class="txt">he/him - 20 - aquarius - it student - wanna be streamer</h4>
+            <p style="color:#B2E8E3;">------------</p>
+            <button class="nav-btn" onclick="openModal('commsInfoModal')">commission-info</button>
+            <button class="nav-btn" onclick="window.location.href='queue.html'">works queue</button>
+            <button class="nav-btn" onclick="openModal('socialsModal')">socials</button>
+            <button class="nav-btn" onclick="openModal('galleryModal')">gallery</button>
+            <button class="nav-btn">loyalty-card</button>
+            <button class="nav-btn contact" onclick="openModal('contactModal')">contact</button>
+        </div>
+    </div>
+
+    <div class="modal" id="commsInfoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>commission info</h2>
+                <span class="close" onclick="closeModal('commsInfoModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="price-chart">
+                    <div id="chart-img">
+                        <img src="price-chart-art.png" style="width: 100%; border-radius: 10px;">
+                    </div>
+                    
+                    <div id="chart-price">
+                        <div class="price-section">
+                            <h2>✦ Chibi ✦</h2>
+                            <p>Bust-up: $6 | Full-body: $10</p>
+                            
+                            <br>
+                            
+                            <h2>✦ Normal ✦</h2>
+                            <p>Eye-shot: $15 <br> Portrait: $20 <br> Bust-up: $25 <br> Half-body: $30 <br> Full-body: $40</p>
+                            
+                            <br>
+                            
+                            <h2>✦ Adds On: animation ✦</h2>
+                            <p>Range: $5-10</p>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="tos">
+
+  <h2 style="text-align:center;" >✦ Terms & Policies ✦</h2> <br>
+
+  <h2 style="color: #42AE98;">✦ Revisions</h2>
+  <p>
+    - Revisions are allowed <strong>only during the sketch and coloring stages</strong><br>
+    - Maximum of <strong>3 revisions</strong> only<br>
+    - Additional (4th and above) revisions will have an <strong>extra fee</strong>
+  </p><br>
+
+  <h2 style="color: #42AE98;">✦ Refund Policy</h2>
+  <p>
+    - No refunds once payment is made and the artwork has <strong>started</strong>
+  </p><br>
+
+  <h2 style="color: #42AE98;">✦ Usage Rights</h2>
+  <p>
+    - Artwork is for <strong>personal use</strong> only<br>
+    - Commercial use is allowed with an <strong>additional 50%</strong> of the total artwork price<br>
+    - Reselling, redistributing, or claiming the artwork as your own is <strong>not allowed</strong><br>
+    - I have the right to <strong>decline</strong> any commission request
+  </p><br>
+
+  <h2 style="color: #42AE98;">✦ Posting / Portfolio Use</h2>
+  <p>
+    - I may <strong>post</strong> the finished artwork on my portfolio or social media<br>
+    - This applies to <strong>both personal and commercial</strong> commissions<br>
+    - If you require privacy, an <strong>NDA (Non-Disclosure Agreement)</strong> must be requested before starting the commission <em>(additional fee applies)</em>
+  </p>
+    <br>
+    
+    <div class="commission-status" style="text-align: center; border-top: 2px dashed #B2E8E3; padding-top: 20px;">
+        <h2 style="color: #42AE98;">✦ Where to Commission? ✦</h2>
+        <p style="margin-bottom: 15px;">Ready to order? Choose a platform below!</p>
+        
+        <div id="links" style="padding: 10px 0;">
+            <a href="https://ko-fi.com/yeshworks" target="_blank">
+                <img class="socials-img" src="kofi.png" alt="Ko-fi">
+            </a>
+            <a href="https://vgen.co/yeshworks" target="_blank">
+                <img class="socials-img" src="vgen.png" alt="VGen">
+            </a>
+        </div>
+        
+        <p style="font-size: 12px; color: #888; font-style: italic;">
+            *Note: vgen are still not available*
+        </p>
+    </div>
+</div>
+
+
+
+    
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+<div class="modal" id="socialsModal">
+    <div class="modal-content soc">
+        <div class="modal-header">
+            <h2>Socials</h2>
+            <span class="close" onclick="closeModal('socialsModal')">&times;</span>
+        </div>
+
+        <div id="links">
+            <a href="https://x.com/yeshworks" target="_blank"><img class="socials-img" src="twitter.png"></a>
+            
+            <img class="socials-img" src="discord.png" onclick="openModal('copyModal')" style="cursor:pointer;">
+            
+            <a href="https://ko-fi.com/yeshworks" target="_blank"><img class="socials-img" src="kofi.png"></a>
+            <a href="https://vgen.co/yeshworks" target="_blank"><img class="socials-img" src="vgen.png"></a>
+        </div>
+        <p id="textsoc" style="color:#42AE98;">active (PST 8am-1am) at discord & twitter</p>
+    </div>
+</div>
+
+<div class="modal" id="copyModal">
+    <div class="modal-content" style="max-width: 300px; text-align: center; padding: 20px;">
+        <div class="modal-header" style="background: none; border: none;">
+            <h2>Discord</h2>
+            <span class="close" onclick="closeModal('copyModal')">&times;</span>
+        </div>
+        <p>Click to copy username:</p>
+        <button class="nav-btn" style="margin: 15px auto; width: 80%;" onclick="copyDiscord()">
+            @yeshworks1
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+    
+    <div class="modal" id="galleryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Gallery</h2>
+                <span class="close" onclick="closeModal('galleryModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="gallery-grid">
+                    <img src="art1.png"><img src="art2.gif"><img src="art3.png">
+                    <img src="art4.png"><img src="art5.png"><img src="art6.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="modal" id="contactModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Contact</h2>
+            <span class="close" onclick="closeModal('contactModal')">&times;</span>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+            <img src="pfp.gif" width="120" style="border-radius: 20px; margin-bottom: 15px;">
+            <h3 class="txt">Let's get in touch!</h3>
+            <p style="margin: 15px 0;" class="txt">Need a commission or have a question? Click the button below to send me a formal email.</p>
+            
+            <a id="gmail-btn" href="mailto:yeshworks.studio@gmail.com?subject=Commission Inquiry">
+                <i class="fa-solid fa-envelope"></i> Send an Email
+            </a>
+        </div>
+    </div>
+</div>
+
+        
+        
+    <img id="commission-me-btn" src="commission-me-icon.png" alt="Open Commissions" onclick="toggleLetter()">
+
+    <div id="commission-me-letter" class="hidden">
+        <div id="letter">
+            <img class="envelope" src="envelope.png" alt="Envelope">
+            <div class="card-box">
+                <div class="top-card-banner"></div>
+                <div style="text-align:center;">
+                    <img src="stamp.png" style="width:80px; margin-top:-40px; border-radius:50%;" />
+                </div>
+                <h3 class="card-title">Commission Yesh?</h3>
+                <p class="card-text">Status: Open! ✨<br>Custom Rowlet art available.</p>
+                <a id="card-link" href="commission.html" target="_blank">Commission Info</a>
+                <a id="card-link" href="https://x.com/ByteYesh41816" class="twitter-btn">DM me Twitter</a>
+                <div class="bot-card-banner"></div>
+            </div>
+            <img class="card-deco" src="card-deco.png" alt="Decoration">
+        </div>
+        <button id="close-letter-btn" onclick="toggleLetter()">Close ✖</button>
+    </div>
+
+    <div id="blur-overlay" class="hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
